@@ -1,0 +1,38 @@
+.svg {
+    width: calc(var(--responsive-size)*2.5);
+    height: calc(var(--responsive-size)*2.5);
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--responsive-size)*5);
+    height: calc(var(--responsive-size)*5);
+    padding: var(--responsive-size);
+    border-radius: 100%;
+}
+
+.container:hover {
+    background-color: var(--color__grey-theme_accent);
+}
+
+.container:active {
+    background-color: var(--color__grey-theme_accent_2);
+}
+
+@media (prefers-color-scheme: dark) {
+    .svg {
+        fill: var(--color__dark-text_color);
+    }
+
+    .container:hover {
+        background-color: var(--color__dark-theme_accent);
+        border:1px var(--color__dark-theme) solid;
+    }
+    
+    .container:active {
+        background-color: var(--color__dark-theme);
+    }
+}

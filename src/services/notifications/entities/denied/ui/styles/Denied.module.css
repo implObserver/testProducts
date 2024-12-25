@@ -1,0 +1,8 @@
+.denied {
+    position: absolute;
+    padding: var(--responsive-size);
+    margin: var(--responsive-size);
+    width: min-content;
+    border-radius: var(--responsive-size);
+    background-color: rgba(255, 208, 0, 0.473);
+}

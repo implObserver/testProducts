@@ -1,0 +1,8 @@
+.access {
+    position: absolute;
+    padding: var(--responsive-size);
+    margin: var(--responsive-size);
+    width: min-content;
+    border-radius: var(--responsive-size);
+    background-color: rgba(0, 255, 34, 0.445);
+}

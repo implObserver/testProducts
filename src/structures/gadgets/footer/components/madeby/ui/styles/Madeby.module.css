@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: calc(var(--responsive-size)*1.5);
+    color: black;
+    gap: var(--responsive-size);
+    font-size: calc(var(--responsive-size)*2);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        color: var(--color__dark-text_color);
+    }
+}
