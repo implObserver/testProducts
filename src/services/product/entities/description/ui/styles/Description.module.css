@@ -1,0 +1,19 @@
+.entity__description {
+    display: grid;
+    padding: var(--responsive-size);
+    font-size: calc(var(--responsive-size)*2);
+}
+
+.entity__description>p {
+    display: -webkit-box;
+    width: calc(var(--responsive-size)*20);
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}

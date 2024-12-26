@@ -10,6 +10,22 @@ export const routes = [
                 path: "/",
                 element: <MainPage />,
             },
+            {
+                path: "/products",
+                element: <MainPage />,
+            },
+            {
+                path: "/products/:id",
+                element: <div>id</div>,
+            },
+            {
+                path: "/create",
+                element: <div>create</div>,
+            },
+            {
+                path: "/edit",
+                element: <div>edit</div>,
+            },
         ],
     },
 ];

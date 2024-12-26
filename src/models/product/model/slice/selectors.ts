@@ -1,0 +1,1 @@
+export const selectProducts = (state: { selectionProducts: UntypedProducts }) => state.selectionProducts;

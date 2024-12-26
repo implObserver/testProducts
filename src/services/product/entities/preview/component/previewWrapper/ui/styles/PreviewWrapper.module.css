@@ -1,0 +1,17 @@
+.wrapper__preview {
+    --background-color__wrapper__preview: #f8f7f5;
+}
+
+.wrapper__preview {
+    display: grid;
+    grid-area: once;
+    width: calc(var(--responsive-size)*20);
+    height: calc(var(--responsive-size)*20);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--background-color__wrapper__preview);
+    border-radius: calc(var(--responsive-size)*2);
+    overflow: hidden;
+}

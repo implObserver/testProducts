@@ -1,3 +1,4 @@
+import { selectionProductsReducer } from '@/models/product';
 import { statusesReducer } from '@/services/notifications/features/notificationDistributor';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import {
@@ -14,6 +15,7 @@ import storage from 'redux-persist/lib/storage';
 
 const rootReducer = combineReducers({
   statuses: statusesReducer,
+  selectionProducts: selectionProductsReducer,
 })
 
 const persistConfig = {
