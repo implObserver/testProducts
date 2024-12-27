@@ -9,3 +9,20 @@
 .button:hover {
     background-color: rgb(116, 204, 255);
 }
+
+.reset {
+    display: grid;
+    width: inherit;
+    height: inherit;
+    background-image: url(../../../../../../common/shared/assets/reset-14.svg);
+    background-size: cover;
+    transition: transform 3s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(1080deg);
+}
+
+.reset:active {
+    transform: rotate(2160deg);
+}

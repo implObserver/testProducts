@@ -1,0 +1,21 @@
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--responsive-size);
+   
+}
+
+.preview {
+    display: grid;
+    border: 1px blue solid;
+}
+
+.description {
+    display: grid;
+    border: 1px green solid;
+}
+
+.price {
+    display: grid;
+    border: 1px purple solid;
+}

@@ -1,5 +1,7 @@
 import { MainLayout } from "@/layouts/default";
+import { FavoritesPage } from "@/pages/favorites";
 import { MainPage } from "@/pages/main";
+import { ProductCart } from "@/services/product/gadgets/productCart";
 
 export const routes = [
     {
@@ -16,7 +18,7 @@ export const routes = [
             },
             {
                 path: "/products/:id",
-                element: <div>id</div>,
+                element: <ProductCart />,
             },
             {
                 path: "/create",
@@ -25,6 +27,10 @@ export const routes = [
             {
                 path: "/edit",
                 element: <div>edit</div>,
+            },
+            {
+                path: "/favorites",
+                element: <FavoritesPage />,
             },
         ],
     },

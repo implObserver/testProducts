@@ -1,0 +1,7 @@
+.page {
+    display: grid;
+    padding: var(--responsive-size);
+    width: inherit;
+    height: 100%;
+    background-color: rgb(255, 241, 246);
+}

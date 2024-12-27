@@ -10,17 +10,31 @@ const selectionProductsSlice = createSlice({
         resetState: (state) => {
             return initialState;
         },
+        changeFavoriteStatus: (state: TypedProducts, action: PayloadAction<TypedProduct>) => {
+            const { id, isFavorite } = action.payload;
+
+            const updatedProduct = { ...action.payload, isFavorite: !isFavorite }
+
+            // Изменяем isFavorite на противоположное значение
+            const index = state.products.findIndex(product => product.id === id);
+
+            state.products.splice(index, 1, updatedProduct);
+        },
+        deleteProduct: (state: TypedProducts, action: PayloadAction<number>) => {
+            const index = state.products.findIndex((product: TypedProduct) => product.id === action.payload);
+            state.products.splice(index, 1);
+        }
     },
     extraReducers: (builder) => {
-        const pendingHandler = (state: UntypedProducts) => {
+        const pendingHandler = (state: TypedProducts) => {
 
         };
 
-        const errorHandler = (state: UntypedProducts) => {
+        const errorHandler = (state: TypedProducts) => {
 
         }
 
-        const downloadProducts = (state: UntypedProducts, action: PayloadAction<EmulateResponse>) => {
+        const downloadProducts = (state: TypedProducts, action: PayloadAction<EmulateResponse>) => {
             if (action.payload.isError) {
 
             } else {

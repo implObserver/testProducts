@@ -2,3 +2,7 @@
     display: grid;
     max-width: 1500px;
 }
+
+.link {
+    text-decoration: none;
+}

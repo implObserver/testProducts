@@ -1,3 +1,3 @@
-export const initialState: UntypedProducts = {
+export const initialState: TypedProducts = {
     products: [],
 }

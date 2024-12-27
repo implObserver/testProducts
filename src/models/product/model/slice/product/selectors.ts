@@ -1,1 +1,1 @@
-export const selectProducts = (state: { selectionProducts: UntypedProducts }) => state.selectionProducts;
+export const selectProducts = (state: { selectionProducts: TypedProducts }) => state.selectionProducts;

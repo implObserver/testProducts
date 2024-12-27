@@ -1,3 +1,3 @@
 interface Favorites {
-    favorites: Array<ProductContextType>
+    favorites: TypedProduct[]
 }

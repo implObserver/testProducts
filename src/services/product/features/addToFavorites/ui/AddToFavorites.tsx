@@ -1,25 +1,25 @@
 'use client';
 
+import { useAppDispatch } from "@/common/shared/lib";
+import { selectionProductsActions } from "@/models/product";
 import { useProductContext } from "@/services/product/shared/lib";
 import { Like, LikeContext } from "@/services/product/shared/ui/like";
-import { useState } from "react";
 
 export const AddToFavorites = () => {
     const context = useProductContext();
-    const [status, setStatus] = useState(false);
+    const dispatch = useAppDispatch();
 
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const element = e.target as HTMLElement;
         if (element.tagName === 'path') {
-            setStatus(!status);
-            
+            dispatch(selectionProductsActions.changeFavoriteStatus(context))
         }
     }
 
     return (
         <div
             onClick={handleClick}>
-            <LikeContext.Provider value={status}>
+            <LikeContext.Provider value={context.isFavorite}>
                 <Like></Like>
             </LikeContext.Provider>
         </div>

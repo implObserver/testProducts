@@ -1,6 +1,7 @@
 const adaptEscuelajsProduct = (product: EscuelajsProduct): TypedProduct => {
-    const typedProduct = {
+    const typedProduct: TypedProduct = {
         id: product.id,
+        title: product.title,
         price: {
             price: product.price,
             currency: "$",
@@ -15,6 +16,8 @@ const adaptEscuelajsProduct = (product: EscuelajsProduct): TypedProduct => {
                 url: image,
             })),
         },
+        category: product.category,
+        isFavorite: false,
     };
 
     return typedProduct
@@ -41,45 +44,3 @@ export const adaptEscuelajsProducts = (apiResponse: EscuelajsProduct[]): TypedPr
         }),
     };
 }
-
-export const adaptFakestoreProducts = (apiResponse: FakestoreProduct[]): TypedProducts => {
-    return {
-        products: apiResponse.map(product => {
-            const relevantId = product.id % 4 === 0
-                ? product.id
-                : -1
-
-            return adaptFakestoreProductWithDiscount(product, relevantId);
-        }),
-    };
-}
-
-const adaptFakestoreProduct = (product: FakestoreProduct): TypedProduct => {
-    const typedProduct = {
-        id: product.id,
-        price: {
-            price: product.price,
-            currency: "$",
-            discount: false,
-            highDiscount: false,
-        },
-        description: {
-            description: product.description,
-        },
-        preview: {
-            urls: [{ url: product.image }],
-        },
-    };
-
-    return typedProduct
-}
-
-const adaptFakestoreProductWithDiscount = (product: FakestoreProduct, discountedId: number): TypedProduct => {
-    const adaptedProduct = adaptFakestoreProduct(product);
-    if (product.id === discountedId) {
-        adaptedProduct.price.discount = true;
-        adaptedProduct.price.highDiscount = adaptedProduct.price.price > 100;
-        adaptedProduct.price.discountPrice = (adaptedProduct.price.price * 0.9).toFixed(2);
-    }
-    return adaptedProduct;
-};

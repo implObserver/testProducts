@@ -3,8 +3,9 @@ import { useCustomState } from "@/common/shared/lib"
 import { ButtonForActionMenu } from "@/common/shared/ui/buttonForActionMenu"
 import { Dropdown, DropdownContext } from "@/common/shared/ui/dropdownElement";
 import { Container } from "../components/container";
+import { memo } from "react";
 
-export const Options = () => {
+export const Options = memo(() => {
     const isOpen = useCustomState();
 
     const clickHandle = () => {
@@ -35,4 +36,4 @@ export const Options = () => {
             </ExternalResetContext.Provider>
         </div>
     )
-}
+})

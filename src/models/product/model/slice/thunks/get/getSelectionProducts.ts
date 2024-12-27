@@ -1,4 +1,5 @@
 import { GetService } from "@/models/product/api";
+import { adaptEscuelajsProducts } from "@/services/product/shared/lib";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getSelectionProducts = createAsyncThunk(
@@ -6,13 +7,16 @@ export const getSelectionProducts = createAsyncThunk(
     async (thunkAPI) => {
         try {
             const response = await GetService.getSelectionProducts();
+            console.log(response)
+            //const typedProducts = adaptFakestoreProducts(untypedProducts).products;
+            const typedProducts = adaptEscuelajsProducts(response.data).products;
             const result: EmulateResponse = {
                 id: 'getSelectionProducts',
                 message: `Выборка продуктов успешно получена`,
                 isError: false,
                 data: {
                     status: response.status,
-                    message: response.data
+                    message: typedProducts as TypedProduct[]
                 }
             }
             return result;

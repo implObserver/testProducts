@@ -1,7 +1,3 @@
-interface UntypedProducts {
-    products: EscuelajsProduct[] | FakestoreProduct[],
-}
-
 interface TypedProducts {
     products: TypedProduct[],
 }
@@ -26,9 +22,12 @@ interface EscuelajsProduct {
 
 interface TypedProduct {
     id: number,
+    title: string,
     price: Price,
     description: Description,
     preview: Preview,
+    category: Category,
+    isFavorite: boolean,
 }
 
 interface Category {

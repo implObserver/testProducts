@@ -1,6 +1,29 @@
-.title {
-    display: flex;
-    justify-content: center;
+.header {
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 1fr min-content;
+    justify-content: space-around;
     padding-left: calc(var(--responsive-size)*10);
     max-width: 1500px;
+}
+
+.title {
+    display: grid;
+    width: max-content;
+}
+
+.tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--responsive-size)*4);
+    height: calc(var(--responsive-size)*4);
 }
