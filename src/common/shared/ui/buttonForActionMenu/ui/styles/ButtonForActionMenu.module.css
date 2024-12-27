@@ -1,0 +1,13 @@
+.dot {
+    width: var(--responsive-size);
+    height: var(--responsive-size);
+    background-color: white;
+    border-radius: 50%;
+    margin: calc(var(--responsive-size)*0.4);
+    border: calc(var(--responsive-size)*0.2) solid rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease;
+}
+
+.button_custom {
+    cursor: pointer;
+}

@@ -1,6 +1,94 @@
 .showcase__product {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: var(--responsive-size);
+}
+
+.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--responsive-size);
+}
+
+.loader {
+    text-align: center;
+}
+
+.product {
+    display: grid;
+    position: relative;
+    grid-template-areas: once;
+}
+
+.cart {
+    display: grid;
+    grid-area: once;
+    position: relative;
+}
+
+.like,
+.options {
+    display: flex;
+    grid-area: once;
+    position: relative;
+    width: min-content;
+}
+
+.like {
+    left: calc(var(--responsive-size)*16.5);
+    background-color: rgba(226, 204, 81);
+    padding: calc(var(--responsive-size)*0.5);
+    padding-top: var(--responsive-size);
+    border-radius: 0 calc(var(--responsive-size)*2) 0 0;
+    border: calc(var(--responsive-size)*0.2) rgb(233, 189, 123) solid;
+}
+
+.options {
+    left: calc(var(--responsive-size)*2);
+    top: calc(var(--responsive-size));
+}
+
+.pagination {
+    display: flex;
+    width: 70%;
+
+    justify-content: space-between;
+    padding: calc(var(--responsive-size)*2);
+    align-items: center;
+    border-bottom: 1px var(--color__grey-theme_accent) solid;
+}
+
+.block {
+    display: none;
+}
+
+.total_pages {
+    width: 100%;
+    text-align: center;
+    font-size: calc(var(--responsive-size)*2);
+}
+
+.pagination_btn {
+    background-color: transparent;
+    border: calc(var(--responsive-size)*0.2) solid #007bff;
+    color: #007bff;
+    padding: var(--responsive-size) calc(var(--responsive-size)*2);
+    font-size: calc(var(--responsive-size)*1.5);
+    border-radius: calc(var(--responsive-size)*0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination_btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination_btn:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(0.95);
+    transition: background-color 0.1s ease;
 }

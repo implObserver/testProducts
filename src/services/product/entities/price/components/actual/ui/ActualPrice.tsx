@@ -8,7 +8,7 @@ export const ActualPrice = () => {
     const price = context.discount
         ? context.discountPrice
         : context.price;
-    console.log(context.discount)
+
     const style = context.discount
         ? context.highDiscount
             ? styles.discount__price__hight

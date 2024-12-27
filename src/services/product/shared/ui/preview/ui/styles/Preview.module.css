@@ -12,3 +12,11 @@
     width: inherit;
     object-fit: contain;
 }
+
+.error {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../../../shared/assets/error.svg);
+    background-size: cover;
+}

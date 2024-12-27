@@ -5,9 +5,9 @@ export const Logo = () => {
     return (
         <div className={styles.logo}>
             <span className={styles.first_word}>
-                <GoogleColorizedText word={'Passwords'}></GoogleColorizedText>
+                <GoogleColorizedText word={'Fake'}></GoogleColorizedText>
             </span>
-            <span className={styles.second_word}>Account</span>
+            <span className={styles.second_word}>Store</span>
         </div>
     )
 }

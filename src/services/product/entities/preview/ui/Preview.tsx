@@ -11,7 +11,6 @@ import { useProductContext } from "@/services/product/shared/lib";
 import { useCustomState } from "@/common/shared/lib";
 
 export const PreviewEntity = () => {
-    const like = useEntityPreviewContext().like;
     const previewContext = useProductContext().preview;
     const url = useCustomState(previewContext.urls[0]);
 
@@ -29,10 +28,6 @@ export const PreviewEntity = () => {
             <ImageContext.Provider value={imageContext}>
                 <PreviewWrapper />
             </ImageContext.Provider>
-
-            <LikeContainer>
-                {like}
-            </LikeContainer>
 
             <ShowCaseContext.Provider value={showCaseContext}>
                 <ShowCaseContainer />

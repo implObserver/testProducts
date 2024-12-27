@@ -1,0 +1,23 @@
+.header {
+    display: grid;
+    position: sticky;
+    top: 0;
+    padding: var(--responsive-size);
+    row-gap: calc(var(--responsive-size)*2);
+    background-color: white;
+    z-index: 2;
+}
+
+.container {
+    display: grid;
+    row-gap: calc(var(--responsive-size)*2);
+    max-width: 1500px;
+    justify-self: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .header {
+        background-color: var(--color__dark-theme);
+        color: var(--color__dark-text_color);
+    }
+}

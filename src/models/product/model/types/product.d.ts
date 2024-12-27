@@ -1,9 +1,18 @@
 interface UntypedProducts {
-    products: EscuelajsProduct | any,
+    products: EscuelajsProduct[] | FakestoreProduct[],
 }
 
 interface TypedProducts {
     products: TypedProduct[],
+}
+
+interface FakestoreProduct {
+    id: number,
+    title: string,
+    price: number,
+    description: string,
+    category: Category,
+    image: string,
 }
 
 interface EscuelajsProduct {
@@ -57,3 +66,7 @@ interface PreviewUrls {
     srcSet?: string[]
 }
 
+interface Pagination {
+    offset: number,
+    limit: number,
+}

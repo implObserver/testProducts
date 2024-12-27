@@ -1,2 +1,6 @@
-export { selectionProductsReducer, selectionProductsActions } from './model/slice/slice'
+export { selectionProductsReducer, selectionProductsActions } from './model/slice/product/slice'
+export { productsPaginationReducer, productsPaginationActions } from './model/slice/pagination/slice'
 export { getSelectionProducts } from './model/slice/thunks/get/getSelectionProducts'
+export { getPaginationProducts } from './model/slice/thunks/get/getPaginationProducts'
+export { selectProductsPagination } from './model/slice/pagination/selectors'
+export { selectProducts } from './model/slice/product/selectors'

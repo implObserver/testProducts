@@ -1,31 +1,36 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { initialState } from "./defaultState";
-import { getSelectionProducts } from "./thunks/get/getSelectionProducts";
+import { getSelectionProducts } from "../thunks/get/getSelectionProducts";
+import { getPaginationProducts } from "../thunks/get/getPaginationProducts";
 
 const selectionProductsSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
-
+        resetState: (state) => {
+            return initialState;
+        },
     },
     extraReducers: (builder) => {
-        const pendingHandler = (state: Products) => {
+        const pendingHandler = (state: UntypedProducts) => {
 
         };
 
-        const errorHandler = (state: Products) => {
+        const errorHandler = (state: UntypedProducts) => {
 
         }
 
-        const downloadSelectionProducts = (state: Products, action: PayloadAction<EmulateResponse>) => {
+        const downloadProducts = (state: UntypedProducts, action: PayloadAction<EmulateResponse>) => {
             if (action.payload.isError) {
 
             } else {
                 state.products = action.payload.data.message;
             }
         }
+
         const asyncActions = [
-            { action: getSelectionProducts, handler: downloadSelectionProducts },
+            { action: getSelectionProducts, handler: downloadProducts },
+            { action: getPaginationProducts, handler: downloadProducts },
         ];
 
         asyncActions.forEach(({ action, handler }) => {

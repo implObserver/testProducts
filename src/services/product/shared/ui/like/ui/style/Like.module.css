@@ -1,3 +1,4 @@
 .like {
     display: grid;
+    justify-self: center;
 }

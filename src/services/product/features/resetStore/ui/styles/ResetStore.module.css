@@ -1,0 +1,11 @@
+.button {
+    display: grid;
+    background-color: rgb(150, 198, 226);
+    padding: calc(var(--responsive-size)*0.5);
+    border-radius: var(--responsive-size);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(116, 204, 255);
+}
