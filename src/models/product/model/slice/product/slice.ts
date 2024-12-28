@@ -12,15 +12,17 @@ const selectionProductsSlice = createSlice({
         },
         changeFavoriteStatus: (state: TypedProducts, action: PayloadAction<TypedProduct>) => {
             const { id, isFavorite } = action.payload;
-
             const updatedProduct = { ...action.payload, isFavorite: !isFavorite }
-
-            // Изменяем isFavorite на противоположное значение
             const index = state.products.findIndex(product => product.id === id);
-
             state.products.splice(index, 1, updatedProduct);
         },
-        deleteProduct: (state: TypedProducts, action: PayloadAction<number>) => {
+        addProduct: (state: TypedProducts, action: PayloadAction<TypedProduct>) => {
+            const index = state.products.findIndex((product: TypedProduct) => product.id === action.payload.id);
+            if (index === -1) {
+                state.products.push(action.payload);
+            }
+        },
+        deleteProduct: (state: TypedProducts, action: PayloadAction<number | string>) => {
             const index = state.products.findIndex((product: TypedProduct) => product.id === action.payload);
             state.products.splice(index, 1);
         }

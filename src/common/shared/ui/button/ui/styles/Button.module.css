@@ -17,3 +17,9 @@
     border-radius: inherit;
     font-size: inherit;
 }
+
+@media (prefers-color-scheme: dark) {
+    .button>button {
+        color: var(--color__dark-text_color)
+    }
+}

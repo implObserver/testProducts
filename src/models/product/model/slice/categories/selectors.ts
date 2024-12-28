@@ -1,0 +1,1 @@
+export const selectCategories = (state: { categories: Categories }) => state.categories;

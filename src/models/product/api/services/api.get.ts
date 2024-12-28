@@ -9,4 +9,7 @@ export const GetService = {
         const escuelajsOffset = pagination.offset * pagination.limit;
         return await defaultQuery.get(`/api/v1/products?offset=${escuelajsOffset}&limit=${pagination.limit}`)
     },
+    async getCategories(): Promise<EscuelajsResponse> {
+        return await defaultQuery.get("/api/v1/categories")
+    },
 }

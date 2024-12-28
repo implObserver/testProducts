@@ -1,4 +1,6 @@
 import { MainLayout } from "@/layouts/default";
+import { CreatorPage } from "@/pages/creator";
+import { EditorPage } from "@/pages/editor";
 import { FavoritesPage } from "@/pages/favorites";
 import { MainPage } from "@/pages/main";
 import { ProductCart } from "@/services/product/gadgets/productCart";
@@ -22,11 +24,11 @@ export const routes = [
             },
             {
                 path: "/create",
-                element: <div>create</div>,
+                element: <CreatorPage />,
             },
             {
                 path: "/edit",
-                element: <div>edit</div>,
+                element: <EditorPage />,
             },
             {
                 path: "/favorites",

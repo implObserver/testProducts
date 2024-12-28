@@ -1,0 +1,54 @@
+.container {
+    display: grid;
+    background-color: rgb(248, 247, 245);
+    border-radius: var(--responsive-size);
+}
+
+.container>span {
+    font-size: calc(var(--responsive-size)*3.5);
+}
+
+.buttons {
+    display: flex;
+    gap: var(--responsive-size);
+    padding: var(--responsive-size);
+}
+
+.buy,
+.card {
+    display: grid;
+    padding: calc(var(--responsive-size)*1.5) 0 calc(var(--responsive-size)*1.5) 0;
+    border-radius: var(--responsive-size);
+    width: calc(var(--responsive-size)*15);
+    cursor: pointer;
+}
+
+.buy {
+    background-color: rgb(234, 231, 226);
+}
+
+.card {
+    background-color: #fce000;
+}
+
+.card:hover {
+    background-color: #fcd600;
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        background-color: var(--color__dark-theme_accent);
+    }
+
+    .buy {
+        background-color: var(--color__dark-theme);
+    }
+
+    .card {
+        background-color: #070707;
+    }
+
+    .card:hover {
+        background-color: #222222;
+    }
+}

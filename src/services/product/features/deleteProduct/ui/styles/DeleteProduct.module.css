@@ -1,5 +1,6 @@
 .button {
     display: grid;
+    appearance: none;
     padding: calc(var(--responsive-size)*0.5);
     border-radius: calc(var(--responsive-size)*0.5);
     cursor: pointer;
@@ -8,4 +9,10 @@
 
 .button:hover {
     background-color: rgb(202, 202, 202);
+}
+
+@media (prefers-color-scheme: dark) {
+    .button:hover {
+        background-color: rgb(78, 78, 78);
+    }
 }

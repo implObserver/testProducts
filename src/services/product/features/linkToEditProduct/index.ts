@@ -1,0 +1,1 @@
+export { LinkToEditProduct } from './ui/LinkToHome'

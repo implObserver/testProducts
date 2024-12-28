@@ -1,0 +1,8 @@
+.container {
+    top: calc(var(--responsive-size)*30);
+    display: flex;
+    position: sticky;
+    align-items: center;
+    gap: var(--responsive-size);
+    width: min-content;
+}

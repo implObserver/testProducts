@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    width: inherit;
+    height: inherit;
+    background-image: url(../../../../../../common/shared/assets/addProductY.png);
+    background-size: cover;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.container:hover {
+    transform: translateY(calc(var(--responsive-size)*-0.3));
+}

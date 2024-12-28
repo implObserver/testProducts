@@ -9,7 +9,7 @@ export const getSelectionProducts = createAsyncThunk(
             const response = await GetService.getSelectionProducts();
             console.log(response)
             //const typedProducts = adaptFakestoreProducts(untypedProducts).products;
-            const typedProducts = adaptEscuelajsProducts(response.data).products;
+            const typedProducts = adaptEscuelajsProducts(response.data as EscuelajsProduct[]).products;
             const result: EmulateResponse = {
                 id: 'getSelectionProducts',
                 message: `Выборка продуктов успешно получена`,

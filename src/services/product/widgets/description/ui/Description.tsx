@@ -6,10 +6,13 @@ export const Description = () => {
     console.log(context)
     return (
         <div className={styles.container}>
-            <div>{context.title}</div>
-            <div>{context.category.name}</div>
-            <div>Описание товара:</div>
-            <div>{context.description.description}</div>
+            <div className={styles.title}>{context.title}</div>
+            <div className={styles.span}>Описание</div>
+            <div className={styles.description}>{context.description.description}</div>
+            <div className={styles.span}>Коротко о товаре</div>
+            <div className={styles.category}>
+                Категория: {context.category.name}
+            </div>
         </div>
     )
 }

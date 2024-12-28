@@ -4,6 +4,7 @@ import styles from './styles/Segment.module.css'
 export const Segment = () => {
     const context = useSegmentContext();
     const handleHover = () => {
+        console.log(context.url)
         context.preview.setState(context.url);
     }
 

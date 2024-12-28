@@ -1,0 +1,17 @@
+.slot {
+    position: relative;
+    overflow: hidden;
+    width: calc(var(--responsive-size)*7);
+    height: calc(var(--responsive-size)*7);
+    /* Высота контейнера */
+    /* Граница для наглядности */
+    /* Указываем курсор для зума */
+    background-size: cover;
+    border-radius: calc(var(--responsive-size)*0.7);
+}
+
+.preview {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}

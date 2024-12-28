@@ -4,4 +4,12 @@
     border-radius: calc(var(--responsive-size));
     width: max-content;
     padding: var(--responsive-size);
+    justify-items: left;
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        display: grid;
+        background-color: var(--color__dark-theme);
+    }
 }

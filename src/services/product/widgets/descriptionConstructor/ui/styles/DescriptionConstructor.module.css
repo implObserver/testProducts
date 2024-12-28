@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    gap: var(--responsive-size);
+    width: calc(var(--responsive-size)*50);
+
+}
+
+.title {
+    font-weight: 600;
+    font-size: calc(var(--responsive-size)*3);
+}
+
+.span {
+    font-weight: 500;
+    font-size: calc(var(--responsive-size)*2);
+}
+
+.description,
+.category {
+    font-size: calc(var(--responsive-size)*1.5);
+}

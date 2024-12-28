@@ -1,0 +1,12 @@
+.panel {
+    display: grid;
+    gap: var(--responsive-size);
+    width: min-content;
+}
+
+.active {
+    display: grid;
+    overflow: hidden;
+    border: calc(var(--responsive-size)*0.2) black solid;
+    border-radius: calc(var(--responsive-size));
+}

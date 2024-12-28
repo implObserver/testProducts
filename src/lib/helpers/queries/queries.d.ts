@@ -7,7 +7,7 @@ interface EmulateResponse {
 
 interface EscuelajsResponse {
     status: number,
-    data: EscuelajsProduct[],
+    data: EscuelajsProduct[] | Category[],
 }
 
 interface ResponseData {

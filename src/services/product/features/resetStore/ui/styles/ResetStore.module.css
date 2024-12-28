@@ -17,6 +17,7 @@
     background-image: url(../../../../../../common/shared/assets/reset-14.svg);
     background-size: cover;
     transition: transform 3s ease-in-out;
+    cursor: pointer;
 }
 
 .rotate {
@@ -24,5 +25,9 @@
 }
 
 .reset:active {
+    transform: rotate(2160deg);
+}
+
+.reset:hover {
     transform: rotate(2160deg);
 }

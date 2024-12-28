@@ -4,3 +4,5 @@ export { getSelectionProducts } from './model/slice/thunks/get/getSelectionProdu
 export { getPaginationProducts } from './model/slice/thunks/get/getPaginationProducts'
 export { selectProductsPagination } from './model/slice/pagination/selectors'
 export { selectProducts } from './model/slice/product/selectors'
+export { categoriesReducer, categoriesActions } from './model/slice/categories/slice'
+export { selectCategories } from './model/slice/categories/selectors'

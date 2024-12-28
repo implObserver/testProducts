@@ -10,3 +10,9 @@
     border: calc(var(--responsive-size)*0.2) black solid;
     border-radius: calc(var(--responsive-size));
 }
+
+@media (prefers-color-scheme: dark) {
+    .active {
+        border: calc(var(--responsive-size)*0.2) var(--color__dark-text_color) solid;
+    }
+}

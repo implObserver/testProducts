@@ -38,3 +38,8 @@ interface ResultsContainerContextType {
 interface KeywordContainerContextType {
     state: StateHandler<string>,
 }
+
+interface Constructor {
+    operation: string,
+    product: TypedProduct
+}

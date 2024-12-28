@@ -17,3 +17,9 @@
     -ms-hyphens: auto;
     hyphens: auto;
 }
+
+@media (prefers-color-scheme: dark) {
+    .entity__description {
+        color: var(--color__dark-text_color);
+    }
+}

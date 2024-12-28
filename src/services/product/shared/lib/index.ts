@@ -1,3 +1,6 @@
 export { ProductContext, useProductContext } from './contexts/Product'
 export { adaptEscuelajsProducts } from './helper/adapters'
 export { getPagination } from './helper/pagination'
+export { NewProductContext, useNewProductContext } from './contexts/NewProduct'
+export { getCurrency } from './helper/currency'
+export { getDefaultProduct } from './helper/getDefaultProduct'

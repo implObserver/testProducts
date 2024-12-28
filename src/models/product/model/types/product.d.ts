@@ -3,7 +3,7 @@ interface TypedProducts {
 }
 
 interface FakestoreProduct {
-    id: number,
+    id: number | string,
     title: string,
     price: number,
     description: string,
@@ -12,7 +12,7 @@ interface FakestoreProduct {
 }
 
 interface EscuelajsProduct {
-    id: number,
+    id: number | string,
     title: string,
     price: number,
     description: string,
@@ -21,17 +21,18 @@ interface EscuelajsProduct {
 }
 
 interface TypedProduct {
-    id: number,
+    id: number | string,
     title: string,
     price: Price,
     description: Description,
     preview: Preview,
     category: Category,
     isFavorite: boolean,
+    isCreated?: boolean,
 }
 
 interface Category {
-    id: number,
+    id: number | string,
     name: string,
     image: string,
 }
@@ -42,6 +43,7 @@ interface Price {
     price: number,
     discountPrice?: string,
     currency?: string,
+    percents?: number,
 }
 
 interface Description {
@@ -68,4 +70,8 @@ interface PreviewUrls {
 interface Pagination {
     offset: number,
     limit: number,
+}
+
+interface Categories {
+    categories: Category[],
 }

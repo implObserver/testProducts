@@ -1,0 +1,61 @@
+.form {
+    display: grid;
+    background-color: white;
+    border: 1px var(--color__grey-theme_accent) solid;
+    border-radius: var(--responsive-size);
+    padding: var(--responsive-size);
+    row-gap: var(--responsive-size);
+}
+
+.form>label {
+    font-weight: 500;
+    font-size: calc(var(--responsive-size)*2.5);
+}
+
+.select {
+    display: grid;
+    padding: var(--responsive-size);
+    font-size: calc(var(--responsive-size)*2);
+    background-color: white;
+    appearance: none;
+    border-radius: var(--responsive-size);
+}
+
+.input {
+    display: flex;
+    width: 80%;
+    padding: var(--responsive-size);
+    outline: none;
+    font-size: calc(var(--responsive-size)*1.5);
+    margin-left: 0;
+    font-size: calc(var(--responsive-size)*2);
+    border-radius: var(--responsive-size);
+}
+
+.checkbox {
+    display: flex;
+    width: calc(var(--responsive-size)*3);
+}
+
+.button {
+    appearance: none;
+    border-radius: var(--responsive-size);
+    padding: calc(var(--responsive-size)*2);
+    cursor: pointer;
+    font-size: calc(var(--responsive-size)*2);
+}
+
+.button:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+@media (prefers-color-scheme: dark) {
+    .input, .form, .select {
+        background-color: var(--color__dark-theme);
+        color: var(--color__dark-text_color)
+    }
+
+    .button:hover {
+        background-color: rgb(116, 116, 116);
+    }
+}

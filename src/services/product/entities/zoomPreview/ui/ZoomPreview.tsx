@@ -1,12 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from './styles/ZoomPreview.module.css'
 import { useProductContext } from "@/services/product/shared/lib";
 import { useZoomPreviewContext } from "../lib/context/Context";
 
 export const ZoomPreview = () => {
     const [hoverData, setHoverData] = useState({ x: 0, y: 0, isHovered: false });
-    const context = useProductContext();
+    const [hasError, setHasError] = useState(false);
     const url = useZoomPreviewContext().getState();
+    
+    useEffect(() => {
+        const img = new Image();
+        img.src = url;
+
+        img.onload = () => {
+            setHasError(false);
+        };
+
+        img.onerror = () => {
+            setHasError(true);
+        };
+
+        return () => {
+            setHasError(false);
+        };
+    }, [url]);
+
+
     const handleMouseMove = (e) => {
         const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
         const x = ((e.clientX - left) / width) * 100;
@@ -28,14 +47,19 @@ export const ZoomPreview = () => {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            <div
-                className={styles.preview}
-                style={{
-                    backgroundImage: `url(${url})`,
-                    backgroundPosition: `${hoverData.x}% ${hoverData.y}%`,
-                    backgroundSize: hoverData.isHovered ? '200%' : '100%',
-                }}
-            />
+            {hasError ? (
+                <div className={styles.error}></div>
+            ) : (
+                <div
+                    className={styles.preview}
+                    style={{
+                        backgroundImage: `url(${url})`,
+                        backgroundPosition: `${hoverData.x}% ${hoverData.y}%`,
+                        backgroundSize: hoverData.isHovered ? '200%' : 'cover',
+                    }}
+                />
+            )}
+
         </div>
     );
 };
