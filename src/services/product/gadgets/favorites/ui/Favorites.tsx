@@ -54,7 +54,9 @@ export const Favorites = () => {
                         <SetCategory></SetCategory>
                     </div>
                 </div>
-                {`Нет любимых товаров в данной категории или по данному запросу :(`}
+                <div className={styles.span}>
+                    {`Нет любимых товаров в данной категории или по данному запросу :(`}
+                </div>
             </div>
         );
     }

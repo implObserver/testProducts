@@ -52,7 +52,9 @@ export const Products = memo(() => {
     if (products.length === 0) {
         return (
             <div className={styles.loader}>
-                Загрузка товаров...
+                <div className={styles.span}>
+                    Загрузка товаров...
+                </div>
                 <SpinnerLoader />
             </div>
         );
@@ -65,7 +67,9 @@ export const Products = memo(() => {
                     <SearchProducts></SearchProducts>
                     <SetCategory></SetCategory>
                 </div>
-                Нет товаров данной категории...
+                <div className={styles.span}>
+                    Нет товаров данной категории...
+                </div>
             </div>
         );
     }

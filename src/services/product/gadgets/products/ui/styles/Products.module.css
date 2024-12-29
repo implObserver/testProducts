@@ -64,3 +64,7 @@
     width: 80vw;
     justify-content: space-between;
 }
+
+.span {
+    font-size: calc(var(--responsive-size)*2);
+}
