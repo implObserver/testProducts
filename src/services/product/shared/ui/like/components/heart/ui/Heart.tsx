@@ -13,10 +13,12 @@ export const Heart = () => {
             className={`${styles.heart} ${styles.click}`}>
             <svg aria-hidden="true"
                 id="wishlist"
-                viewBox="0 0 22 21"
+                viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
                 style={{
-                    color: color
+                    color: color,
+                    width: '100%',
+                    height: 'auto',
                 }}>
                 <path
                     d="M16.226 14.753A41.24 41.24 0 0 1 11 18.934a41.22 41.22 0 0 

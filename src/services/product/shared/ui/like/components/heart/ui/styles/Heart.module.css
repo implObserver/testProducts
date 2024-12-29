@@ -3,7 +3,7 @@
 }
 
 .heart {
-    display: grid;
+    display: flex;
     z-index: 1;
     width: calc(var(--responsive-size)*3);
     height: calc(var(--responsive-size)*3);
