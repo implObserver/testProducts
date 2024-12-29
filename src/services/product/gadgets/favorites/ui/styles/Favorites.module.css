@@ -53,7 +53,6 @@
 .pagination {
     display: flex;
     width: 70%;
-
     justify-content: space-between;
     padding: calc(var(--responsive-size)*2);
     align-items: center;
@@ -91,4 +90,25 @@
     border-color: #0056b3;
     transform: scale(0.95);
     transition: background-color 0.1s ease;
+}
+
+.panel {
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+}
+
+.search {
+    background-color: #fff1f6 !important;
+}
+
+.category {
+    background-color: #fff1f6 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .category,
+    .search {
+        background-color: inherit !important;
+    }
 }

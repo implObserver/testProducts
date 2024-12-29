@@ -7,8 +7,6 @@ export const getCategoriesProducts = createAsyncThunk(
     async (thunkAPI) => {
         try {
             const response = await GetService.getCategories();
-            console.log(response)
-            //const typedProducts = adaptFakestoreProducts(untypedProducts).products;
             const categories = response.data as Category[];
             const result: EmulateResponse = {
                 id: 'getCategoriesProducts',

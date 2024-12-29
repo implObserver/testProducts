@@ -8,12 +8,14 @@ import { useEffect } from 'react';
 import { getCategoriesProducts } from '@/models/product/model/slice/thunks/get/getCategories';
 import { SmartPreviewConstructor } from '@/services/product/widgets/smartPreviewConstructor';
 import { useLocation } from 'react-router-dom';
+import _ from 'lodash';
 
 export const ProductEditor = () => {
     const product = useLocation().state;
+    const productCopy = _.cloneDeep(product);
     const constructor: Constructor = {
         operation: 'edit',
-        product: product,
+        product: productCopy,
     }
     const currentProduct = useCustomState(constructor);
     const dispatch = useAppDispatch();

@@ -19,6 +19,24 @@
     background-color: white;
     appearance: none;
     border-radius: var(--responsive-size);
+    cursor: pointer;
+}
+
+option {
+    border: 1px red solid;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none; /* Safari и Chrome */
+    appearance: none; /* Современные браузеры */
+}
+
+/* Убираем стрелочки, добавьте это, чтобы скрыть их в браузерах, которые использует стрелочки по умолчанию */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Safari и Chrome */
+    margin: 0; /* Внутренний отступ */
 }
 
 .input {
@@ -30,6 +48,7 @@
     margin-left: 0;
     font-size: calc(var(--responsive-size)*2);
     border-radius: var(--responsive-size);
+    cursor: pointer;
 }
 
 .checkbox {
@@ -50,7 +69,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .input, .form, .select {
+
+    .input,
+    .form,
+    .select {
         background-color: var(--color__dark-theme);
         color: var(--color__dark-text_color)
     }

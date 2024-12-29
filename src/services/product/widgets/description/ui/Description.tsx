@@ -3,7 +3,6 @@ import styles from './styles/Description.module.css'
 
 export const Description = () => {
     const context = useProductContext();
-    console.log(context)
     return (
         <div className={styles.container}>
             <div className={styles.title}>{context.title}</div>

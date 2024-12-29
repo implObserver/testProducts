@@ -1,5 +1,3 @@
-'use client';
-
 import { useAppDispatch } from "@/common/shared/lib";
 import { selectionProductsActions } from "@/models/product";
 import { useProductContext } from "@/services/product/shared/lib";

@@ -16,8 +16,9 @@ export const ProductForm = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(data)
     }
+
+    console.log(data)
 
     const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const newData = { ...data };
@@ -97,10 +98,11 @@ export const ProductForm = () => {
                 id="category"
                 name="category"
                 required={true}
+                defaultValue={data.category.name}
             >
-                <option value="">--Выберите категорию--</option>
+                <option className={styles.option} value="">--Выберите категорию--</option>
                 {categories.map((category) => (
-                    <option key={category.id} value={category.name}>
+                    <option key={category.id} className={styles.option} value={category.name}>
                         {category.name}
                     </option>
                 ))}
@@ -115,10 +117,11 @@ export const ProductForm = () => {
                 id="currency"
                 name="currency"
                 required={true}
+                defaultValue={data.price.currency}
             >
-                <option value="">--Выберите валюту--</option>
+                <option className={styles.option} value="">--Выберите валюту--</option>
                 {currency.map((currency, index) => (
-                    <option key={index} value={currency}>
+                    <option key={index} className={styles.option} value={currency}>
                         {currency}
                     </option>
                 ))}

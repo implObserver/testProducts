@@ -6,7 +6,7 @@ import styles from './styles/SmartPreview.module.css'
 
 export const SmartPreview = () => {
     const context = useProductContext();
-    console.log(context)
+
     const url = context.preview.urls[0].url;
     const preview = useCustomState(url);
 

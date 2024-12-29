@@ -1,9 +1,14 @@
 interface TypedProducts {
+    paginated: TypedProduct[],
+    favoritesPaginated: TypedProduct[],
     products: TypedProduct[],
+    relative: TypedProduct[],
+    category: TypedProduct[],
+    favorites: TypedProduct[],
 }
 
 interface FakestoreProduct {
-    id: number | string,
+    id: string,
     title: string,
     price: number,
     description: string,
@@ -12,7 +17,7 @@ interface FakestoreProduct {
 }
 
 interface EscuelajsProduct {
-    id: number | string,
+    id: string,
     title: string,
     price: number,
     description: string,
@@ -21,7 +26,7 @@ interface EscuelajsProduct {
 }
 
 interface TypedProduct {
-    id: number | string,
+    id: string,
     title: string,
     price: Price,
     description: Description,
@@ -32,7 +37,7 @@ interface TypedProduct {
 }
 
 interface Category {
-    id: number | string,
+    id: string,
     name: string,
     image: string,
 }
@@ -73,5 +78,6 @@ interface Pagination {
 }
 
 interface Categories {
+    active: Category,
     categories: Category[],
 }

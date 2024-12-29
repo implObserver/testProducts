@@ -1,6 +1,7 @@
 import { favoritesPaginationReducer } from '@/models/favorite';
 import { favoritesStatusReducer } from '@/models/favoritesPage';
 import { categoriesReducer, productsPaginationReducer, selectionProductsReducer } from '@/models/product';
+import { searchInputReducer } from '@/models/searchProductInput';
 import { statusesReducer } from '@/services/notifications/features/notificationDistributor';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import {
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   favoritesPagination: favoritesPaginationReducer,
   favoritesStatus: favoritesStatusReducer,
   categories: categoriesReducer,
+  searchInput: searchInputReducer,
 })
 
 const persistConfig = {

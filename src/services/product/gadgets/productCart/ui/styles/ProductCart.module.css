@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--responsive-size);
-   
+
 }
 
 .preview {
@@ -18,4 +18,30 @@
 .price {
     display: grid;
     border: 1px purple solid;
+}
+
+.preview_container {
+    position: relative;
+}
+
+.like,
+.options {
+    display: flex;
+    width: min-content;
+    position: relative;
+}
+
+.like {
+    left: calc(var(--responsive-size)*34);
+    bottom: calc(var(--responsive-size)*35);
+    background-color: rgba(226, 204, 81);
+    padding: calc(var(--responsive-size)*0.5);
+    padding-top: var(--responsive-size);
+    border-radius: 0 calc(var(--responsive-size)*1.5) 0 0;
+    border: calc(var(--responsive-size)*0.2) rgb(233, 189, 123) solid;
+}
+
+.options {
+    bottom: calc(var(--responsive-size)*29);
+    left: calc(var(--responsive-size)*10);
 }

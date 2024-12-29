@@ -27,3 +27,12 @@
     width: calc(var(--responsive-size)*4);
     height: calc(var(--responsive-size)*4);
 }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.rotate {
+    transform: rotate(270deg);
+}

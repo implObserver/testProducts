@@ -1,0 +1,1 @@
+export const selectSearchInput = (state: { searchInput: SearchInputState }) => state.searchInput;

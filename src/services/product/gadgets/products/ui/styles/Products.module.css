@@ -58,3 +58,9 @@
     transform: scale(0.95);
     transition: background-color 0.1s ease;
 }
+
+.panel {
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+}

@@ -7,6 +7,7 @@ interface IsFavourite {
     writable: boolean;
 }
 
-interface Examples {
-    [key: string]: Product;
+interface ProductsSystem {
+    products: TypedProduct[],
+    paginated: TypedProduct[],
 }

@@ -1,5 +1,3 @@
-"use client"; 
-
 import { createContext, useContext } from "react";
 
 export const PriceContext = createContext<undefined | PriceContextType>(undefined);

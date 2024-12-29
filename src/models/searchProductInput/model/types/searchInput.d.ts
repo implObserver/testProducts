@@ -1,0 +1,3 @@
+interface SearchInputState {
+    request: string,
+}

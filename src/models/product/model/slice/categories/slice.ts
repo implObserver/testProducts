@@ -9,6 +9,9 @@ const categoriesSlice = createSlice({
         addCategory: (state: Categories, action: PayloadAction<Category>) => {
             state.categories.push(action.payload);
         },
+        setActiveCategory: (state: Categories, action: PayloadAction<Category>) => {
+            state.active = action.payload;
+        },
     },
     extraReducers: (builder) => {
         const pendingHandler = (state: Categories) => {

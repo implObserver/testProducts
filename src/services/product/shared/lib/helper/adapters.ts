@@ -23,7 +23,7 @@ const adaptEscuelajsProduct = (product: EscuelajsProduct): TypedProduct => {
     return typedProduct
 }
 
-const adaptEscuelajsProductWithDiscount = (product: EscuelajsProduct, discountedId: number): TypedProduct => {
+const adaptEscuelajsProductWithDiscount = (product: EscuelajsProduct, discountedId: string): TypedProduct => {
     const adaptedProduct = adaptEscuelajsProduct(product);
     if (product.id === discountedId) {
         adaptedProduct.price.discount = true;
@@ -33,14 +33,14 @@ const adaptEscuelajsProductWithDiscount = (product: EscuelajsProduct, discounted
     return adaptedProduct;
 };
 
-export const adaptEscuelajsProducts = (apiResponse: EscuelajsProduct[]): TypedProducts => {
-    return {
-        products: apiResponse.map(product => {
-            const relevantId = product.id % 4 === 0
-                ? product.id
-                : -1
+export const adaptEscuelajsProducts = (apiResponse: EscuelajsProduct[]): TypedProduct[] => {
+    const typedProducts = [];
+    apiResponse.map((product, index) => {
+        const relevantId = index % 4
+            ? product.id
+            : null
+        typedProducts.push(adaptEscuelajsProductWithDiscount(product, relevantId));
+    });
+    return typedProducts;
 
-            return adaptEscuelajsProductWithDiscount(product, relevantId);
-        }),
-    };
-}
+};

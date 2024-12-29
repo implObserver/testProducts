@@ -1,0 +1,21 @@
+.input {
+    display: flex;
+    border-bottom: 1px var(--color__grey-theme_accent) solid;
+    background-color: inherit;
+}
+
+.search {
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    width: calc(var(--responsive-size)*4);
+    height: calc(var(--responsive-size)*4);
+    background-size: 100%;
+    background-image: url(../../../../../../common/shared/assets/search.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+    .input {
+        border-bottom: 1px var(--color__dark-theme_accent) solid;
+    }
+}

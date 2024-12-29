@@ -15,7 +15,6 @@ export const PreviewPanelConstructor = () => {
     };
 
     const fill = () => {
-        console.log(urls)
         return urls.map((url, index) => {
             return (
                 <div key={index} onMouseMove={() => handleMouseMove(url.url, index)}>

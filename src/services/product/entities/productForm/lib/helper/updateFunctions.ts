@@ -21,7 +21,7 @@ const updatePrice = (newData: TypedProduct, e: React.ChangeEvent<HTMLInputElemen
     const price = parseInt(e.target.value);
     if (!isNaN(price)) {
         newData.price.price = price;
-        newData.price.discountPrice = (price * newData.price.percents / 100).toString();
+        newData.price.discountPrice = (price * newData.price.percents / 100).toFixed(2);
     } else {
         newData.price.price = 0;
         newData.price.discountPrice = '';
@@ -32,7 +32,7 @@ const updateDiscount = (newData: TypedProduct, e: React.ChangeEvent<HTMLInputEle
     let percents = Math.max(0, Math.min(100, parseInt(e.target.value)));
 
     newData.price.percents = percents;
-    newData.price.discountPrice = (newData.price.price - (newData.price.price * (percents / 100))).toString();
+    newData.price.discountPrice = (newData.price.price - (newData.price.price * (percents / 100))).toFixed(2);
 
     if (percents === 0) {
         newData.price.discount = false;
@@ -46,6 +46,7 @@ const updateDiscount = (newData: TypedProduct, e: React.ChangeEvent<HTMLInputEle
 const updateUrl = (newData: TypedProduct, e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const urlIndex = parseInt(e.target.id.charAt(e.target.id.length - 1)) - 1;
     if (!newData.preview.urls[urlIndex]) {
+        console.log('wtfdf')
         newData.preview.urls[urlIndex] = { url: '' };
     }
     newData.preview.urls[urlIndex].url = e.target.value;

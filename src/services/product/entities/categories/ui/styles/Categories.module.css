@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    background-color: inherit;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    width: calc(var(--responsive-size)*4);
+    height: calc(var(--responsive-size)*4);
+    background-size: 100%;
+    background-image: url(../../../../../../common/shared/assets/filter.svg);
+}
+
+.select {
+    display: grid;
+    padding: var(--responsive-size);
+    font-size: calc(var(--responsive-size)*2);
+    background-color: inherit;
+    appearance: none;
+    border-radius: var(--responsive-size);
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .input,
+    .form,
+    .select,
+    .filter,
+    .container {
+        background-color: inherit;
+        color: var(--color__dark-text_color)
+    }
+
+    .button:hover {
+        background-color: rgb(116, 116, 116);
+    }
+}

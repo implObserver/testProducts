@@ -1,5 +1,3 @@
-"use client"; 
-
 import { createContext, useContext } from "react";
 
 export const KeywordContainerContext = createContext<undefined | KeywordContainerContextType>(undefined);

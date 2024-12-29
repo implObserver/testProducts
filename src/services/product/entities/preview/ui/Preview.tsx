@@ -1,5 +1,3 @@
-'use client';
-
 import { ImageContext } from "@/services/product/shared/ui/preview"
 import { ShowCaseContainer } from "../component/showCaseFeatureContainer"
 import { PreviewWrapper } from "../component/previewWrapper";
