@@ -1,13 +1,11 @@
 import { persistor } from "@/app/model/store/Store";
-import { useAppDispatch, useCustomState } from "@/common/shared/lib";
-import { Button } from "@/common/shared/ui/button";
+import { useAppDispatch } from "@/common/shared/lib";
 import { categoriesActions, productsPaginationActions, selectionProductsActions, selectProducts } from "@/models/product";
 import styles from './styles/ResetStore.module.css'
 import { useSelector } from "react-redux";
-import { favoritesPaginationActions } from "@/models/favorite";
-import { favoritesStatusActions } from "@/models/favoritesPage";
-import { searchInputActions } from "@/models/searchProductInput";
 import { useNavigate } from "react-router-dom";
+import { searchInputActions } from "@/models/searchProductInput";
+import { favoritesPaginationActions } from "@/models/favorite";
 
 export const ResetStore = () => {
     const dispatch = useAppDispatch();
@@ -17,7 +15,11 @@ export const ResetStore = () => {
     const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         if (confirm('Внимание, это сбросит магазин и все изменения в начальное состояние, вы потеряете все созданные продукты')) {
             persistor.purge();
-            dispatch(selectionProductsActions.resetState())
+            dispatch(selectionProductsActions.resetState());
+            dispatch(categoriesActions.resetState());
+            dispatch(searchInputActions.resetState());
+            dispatch(favoritesPaginationActions.resetState());
+            dispatch(productsPaginationActions.resetState());
             navigation('/products')
             console.log('Магазин сброшен');
         } else {

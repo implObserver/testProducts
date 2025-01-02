@@ -6,6 +6,9 @@ const categoriesSlice = createSlice({
     name: 'products_categories',
     initialState,
     reducers: {
+        resetState: () => {
+            return initialState;
+        },
         addCategory: (state: Categories, action: PayloadAction<Category>) => {
             state.categories.push(action.payload);
         },
